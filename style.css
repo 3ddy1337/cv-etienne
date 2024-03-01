@@ -52,3 +52,12 @@ h6 {
 .main > *:first-child {
   border-top: none;
 }
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+.profession::after {
+  content: "👨‍🎓⛰️🏁";
+}
