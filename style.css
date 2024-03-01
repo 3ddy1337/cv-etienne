@@ -27,3 +27,28 @@ h6 {
   margin: 0 auto;
   padding: 16px;
 }
+
+.main > * + * {
+  margin-top: 40px;
+}
+
+.nav-link {
+  padding: 2px 5px;
+  color: black;
+}
+
+.nav-link:hover {
+  background-color: white;
+}
+
+.nav-link:active {
+  color: grey;
+}
+
+.main > * {
+  border-top: 2px solid black;
+}
+
+.main > *:first-child {
+  border-top: none;
+}
