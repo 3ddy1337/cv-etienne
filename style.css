@@ -2,16 +2,19 @@
 
 /* General-Styling */
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
 }
 
 h1,
@@ -28,41 +31,56 @@ h6 {
 /* Specific-Styling */
 
 .header {
-  padding: 40px 20px;
-  padding-top: 50px;
+  padding: 3.5rem 1rem;
+  padding-top: 4rem;
   text-align: center;
   background-color: lightgray;
-
   position: relative;
 }
 
 .hire-me {
   position: absolute;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: lawngreen;
-  padding: 5px;
-  right: 16px;
-  top: 16px;
+  border: 0.15rem solid black;
+  border-radius: 0.5rem;
+  background-color: aquamarine;
+  padding: 0.5rem;
+  right: 1rem;
+  top: 1rem;
+}
+
+.heading-group {
+  font-size: 3.5rem;
+}
+
+.main-heading {
+  font-size: 1em;
+}
+
+.profession {
+  font-size: 0.25em;
+  position: relative;
+  top: -1.8rem;
 }
 
 .main {
-  max-width: 800px;
+  max-width: 70ch;
   margin: 0 auto;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .main > * + * {
-  margin-top: 40px;
+  margin-top: 3rem;
 }
 
 .nav-link {
-  padding: 2px 5px;
+  padding: 0.3rem 0.5rem;
   color: black;
+  border: 0.15rem solid black;
+  border-radius: 0.5rem;
 }
 
 .nav-link:hover {
-  background-color: white;
+  background-color: aquamarine;
 }
 
 .nav-link:active {
@@ -70,8 +88,8 @@ h6 {
 }
 
 .main > * {
-  border-top: 2px solid black;
-  padding: 0 16px;
+  border-top: 0.25rem solid dimgrey;
+  padding: 0 1rem;
 }
 
 .main > *:first-child {
@@ -79,8 +97,8 @@ h6 {
 }
 
 ::selection {
-  background-color: black;
-  color: white;
+  background-color: aquamarine;
+  color: black;
 }
 
 .profession::after {
@@ -97,5 +115,5 @@ h6 {
 
 .heading {
   position: relative;
-  right: 12px;
+  right: 0.75rem;
 }
