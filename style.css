@@ -7,7 +7,7 @@
 }
 
 html {
-  font-family: Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 /******************************************************************************/
@@ -29,8 +29,21 @@ h6 {
 
 .header {
   padding: 40px 20px;
+  padding-top: 50px;
   text-align: center;
   background-color: lightgray;
+
+  position: relative;
+}
+
+.hire-me {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: lawngreen;
+  padding: 5px;
+  right: 16px;
+  top: 16px;
 }
 
 .main {
@@ -58,6 +71,7 @@ h6 {
 
 .main > * {
   border-top: 2px solid black;
+  padding: 0 16px;
 }
 
 .main > *:first-child {
@@ -79,4 +93,9 @@ h6 {
 
 .experience-subheading {
   display: inline-block;
+}
+
+.heading {
+  position: relative;
+  right: 12px;
 }
