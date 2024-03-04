@@ -74,8 +74,8 @@ body {
 
 .hire-me {
   position: absolute;
-  border: 0.15rem solid black;
-  border-radius: 0.5rem;
+  border: 3px solid black;
+  border-radius: 5px;
   background-color: aquamarine;
   padding: 0.5rem;
   right: 1rem;
@@ -98,11 +98,24 @@ body {
   }
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 .nav-link {
   padding: 0.3rem 0.5rem;
   color: black;
-  border: 0.15rem solid black;
-  border-radius: 0.5rem;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 
 .nav-link:hover {
@@ -114,7 +127,14 @@ body {
 }
 
 .nav-link + .nav-link {
-  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+    margin-top: 0rem;
+  }
 }
 
 .main {
@@ -147,10 +167,16 @@ body {
   right: 0.75rem;
 }
 
-.experience-heading {
-  display: inline-block;
+.experience-header {
+  display: flex;
+  flex-direction: column;
 }
 
-.experience-subheading {
-  display: inline-block;
+@media screen and (min-width: 768px) {
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
