@@ -13,8 +13,16 @@ html {
   font-size: 16px;
 }
 
-body {
-  margin: 0;
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 h1,
@@ -24,6 +32,14 @@ h4,
 h5,
 h6 {
   font-family: "Oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background-color: aquamarine;
 }
 
 /******************************************************************************/
@@ -36,16 +52,6 @@ h6 {
   text-align: center;
   background-color: lightgray;
   position: relative;
-}
-
-.hire-me {
-  position: absolute;
-  border: 0.15rem solid black;
-  border-radius: 0.5rem;
-  background-color: aquamarine;
-  padding: 0.5rem;
-  right: 1rem;
-  top: 1rem;
 }
 
 .heading-group {
@@ -62,14 +68,34 @@ h6 {
   top: -1.8rem;
 }
 
-.main {
-  max-width: 70ch;
-  margin: 0 auto;
-  padding: 1rem;
+.profession::after {
+  content: "👨‍🎓⛰️🏁";
 }
 
-.main > * + * {
-  margin-top: 3rem;
+.hire-me {
+  position: absolute;
+  border: 0.15rem solid black;
+  border-radius: 0.5rem;
+  background-color: aquamarine;
+  padding: 0.5rem;
+  right: 1rem;
+  top: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .hire-me {
+    position: fixed;
+  }
+}
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
 }
 
 .nav-link {
@@ -87,6 +113,26 @@ h6 {
   color: grey;
 }
 
+.nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.main > * + * {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 5rem;
+  }
+}
+
 .main > * {
   border-top: 0.25rem solid dimgrey;
   padding: 0 1rem;
@@ -96,13 +142,9 @@ h6 {
   border-top: none;
 }
 
-::selection {
-  background-color: aquamarine;
-  color: black;
-}
-
-.profession::after {
-  content: "👨‍🎓⛰️🏁";
+.article-heading {
+  position: relative;
+  right: 0.75rem;
 }
 
 .experience-heading {
@@ -111,9 +153,4 @@ h6 {
 
 .experience-subheading {
   display: inline-block;
-}
-
-.heading {
-  position: relative;
-  right: 0.75rem;
 }
