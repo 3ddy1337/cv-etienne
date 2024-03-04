@@ -42,6 +42,14 @@ body {
   background-color: aquamarine;
 }
 
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: black;
+}
+
 /******************************************************************************/
 
 /* Specific-Styling */
@@ -50,7 +58,7 @@ body {
   padding: 3.5rem 1rem;
   padding-top: 4rem;
   text-align: center;
-  background-color: lightgray;
+  background-image: linear-gradient(aquamarine, white);
   position: relative;
 }
 
@@ -76,10 +84,11 @@ body {
   position: absolute;
   border: 3px solid black;
   border-radius: 5px;
-  background-color: aquamarine;
+  background-image: linear-gradient(aquamarine, white);
   padding: 0.5rem;
   right: 1rem;
   top: 1rem;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 992px) {
@@ -154,7 +163,7 @@ body {
 }
 
 .main > * {
-  border-top: 0.25rem solid dimgrey;
+  border-top: 0.25rem solid aquamarine;
   padding: 0 1rem;
 }
 
@@ -179,4 +188,12 @@ body {
     align-items: baseline;
     justify-content: space-between;
   }
+}
+
+.footer {
+  padding: 2rem 1rem;
+  padding-top: 3rem;
+  text-align: center;
+  background-image: linear-gradient(white, aquamarine);
+  font-weight: bold;
 }
