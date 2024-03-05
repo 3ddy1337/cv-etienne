@@ -38,6 +38,7 @@ body {
   margin: 0;
   color: var(--page-text-color);
   background-color: var(--page-background-color);
+
   --main-color: aquamarine;
   --gradient-color: white;
   --nav-hover: rgb(110, 235, 190);
@@ -117,6 +118,15 @@ a:active {
   padding: 0.5rem;
   right: 1rem;
   top: 1rem;
+  opacity: 0.5;
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.header:hover .hire-me,
+.header:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.5);
 }
 
 @media screen and (min-width: 992px) {
