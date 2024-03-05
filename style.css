@@ -40,30 +40,30 @@ body {
   background-color: var(--page-background-color);
   --main-color: aquamarine;
   --gradient-color: white;
-  --border-color: black;
-  --nav-hover: aquamarine;
-  --nav-active: rgb(110, 235, 190);
+  --nav-hover: rgb(110, 235, 190);
+  --nav-active: aquamarine;
   --link-color: black;
   --page-background-color: white;
   --page-text-color: black;
   --selection-background-color: aquamarine;
   --selection-text-color: black;
   --seperator-color: aquamarine;
+  --hire-me-color: rgb(98, 200, 165);
 }
 
 @media screen and (prefers-color-scheme: dark) {
   body {
     --main-color: aquamarine;
     --gradient-color: rgb(31, 28, 28);
-    --border-color: white;
-    --nav-hover: rgb(69, 141, 117);
-    --nav-active: rgb(90, 170, 150);
+    --nav-hover: rgb(90, 170, 150);
+    --nav-active: rgb(69, 141, 117);
     --link-color: white;
     --page-background-color: rgb(31, 28, 28);
     --page-text-color: white;
     --selection-background-color: rgb(90, 170, 150);
     --selection-text-color: black;
     --seperator-color: rgb(69, 141, 117);
+    --hire-me-color: rgb(69, 141, 117);
   }
 }
 
@@ -112,13 +112,11 @@ a:active {
 
 .hire-me {
   position: absolute;
-  border: 3px solid var(--border-color);
-  border-radius: 5px;
-  background-image: linear-gradient(var(--main-color), var(--gradient-color));
+  border-radius: 0.25rem;
+  background-color: var(--hire-me-color);
   padding: 0.5rem;
   right: 1rem;
   top: 1rem;
-  font-weight: bold;
 }
 
 @media screen and (min-width: 992px) {
@@ -152,8 +150,8 @@ a:active {
 
 .nav-link {
   padding: 0.3rem 0.5rem;
-  border: 3px solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 0.25rem;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .nav-link:hover {
@@ -162,6 +160,10 @@ a:active {
 
 .nav-link:active {
   background-color: var(--nav-active);
+}
+
+.nav-link:focus {
+  outline-style: groove;
 }
 
 .nav-link + .nav-link {
@@ -224,5 +226,4 @@ a:active {
   padding-top: 3rem;
   text-align: center;
   background-image: linear-gradient(var(--gradient-color), var(--main-color));
-  font-weight: bold;
 }
