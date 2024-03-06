@@ -193,13 +193,23 @@ a:active {
   padding: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 100ch;
+  }
+}
+
 .main > * + * {
   margin-top: 3rem;
 }
 
 @media screen and (min-width: 768px) {
   .main > * + * {
-    margin-top: 5rem;
+    margin-top: 6rem;
+  }
+
+  .main > *:first-child {
+    margin-top: 4rem;
   }
 }
 
@@ -212,9 +222,16 @@ a:active {
   border-top: none;
 }
 
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
 .article-heading {
   position: relative;
-  right: 0.75rem;
+  left: -0.75rem;
 }
 
 .experience-header {
