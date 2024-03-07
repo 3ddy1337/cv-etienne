@@ -251,6 +251,7 @@ a:active {
 .footer {
   padding: 2rem 1rem;
   padding-top: 3rem;
+  margin-top: 2rem;
   text-align: center;
   background-image: linear-gradient(var(--gradient-color), var(--main-color));
   position: relative;
